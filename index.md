@@ -28,3 +28,5 @@ I did that using Symfony2, PDO, Shell script, Twig, and Bootstrap.
 
 [![alt text](https://content.linkedin.com/etc/designs/linkedin/katy/global/clientlibs/img/logo.png)]
 (https://www.linkedin.com/in/jeancsil/ "Jean Silva")
+
+![github profile](https://assets-cdn.github.com/images/icons/emoji/octocat.png) [jeancsil](https://github.com/jeancsil)
