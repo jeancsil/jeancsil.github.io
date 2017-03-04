@@ -10,7 +10,7 @@ _Specialities_:
 
 # Experiences
 ## Software Engineer at trivago since March 2016
-
+...
 ## Senior PHP Developer at Flexy Negócios Digitais since March 2014
 Senior PHP Developer focused in development of a SaaS e-commerce platform highly available, scalable in AWS cloud, using Symfony2, Unit Tests, Service Oriented Architecture, Memcached, Redis, ElasticSearch, ElastiCache, RDS, EC2, ELB, Elastic Beanstalk...
 Also working as DevOps doing many improvements in deployment script using python and capistrano. Doing many changes to improve performance (load time) and cost reduction.
