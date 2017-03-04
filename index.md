@@ -27,13 +27,11 @@ _Specialities_:
 
 ### Freelance Software Engineer at Chipus Microelectronics
 ###### between January and February 2014
-```
 I worked as a freelancer software developer to ​Chipus IP​. The goals were to allow fast and semantic search on a MySQL database with about 40 millions records and more than 10 Gigabytes of data.
 I also automated its database update based on a government data with information about imported electronic chips from Brazil in Microsoft Access Database format (.mdb).
 Used Sphinx Search to index that database and allow fastest search response time.
 Increased the search performance from ~6/~8 seconds (0.5 million records) to ~1/~2 seconds (40 millions records).
 I did that using Symfony2, PDO, Shell script, Twig, and Bootstrap.
-```
 
 ![linked profile](https://content.linkedin.com/etc/designs/linkedin/katy/global/clientlibs/img/logo.png) [jeancsil](https://www.linkedin.com/in/jeancsil/)
 
