@@ -13,4 +13,4 @@ Specialities: PHP, Java, Shell Script, Python, Linux, ElasticSearch, Solr, Memca
 ### Freelance Software Engineer at Chipus Microelectronics between January and February 2014
 
 [![linkedin logo](https://content.linkedin.com/etc/designs/linkedin/katy/global/clientlibs/img/logo.png)]
-(https://www.linkedin.com/in/jeancsil// "Jean Silva")
+(https://www.linkedin.com/in/jeancsil/ "Jean Silva")
