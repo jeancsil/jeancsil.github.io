@@ -7,19 +7,19 @@ Currently I am working at [trivago](https://twitter.com/lifeattrivago?lang=en) i
 _Specialities_:
 `PHP`, `Java`, `Shell Script`, `Python`, `Linux`, `ElasticSearch`, `Solr`, `Memcached`, `Redis`, `AWS`, `MySQL`, `MongoDB`, `Nginx`...
 
-# Experiences
+# Experiences:
 
 ### Software Engineer at trivago
-###### since March 2016
+##### since March 2016
 ...
 
 ### Senior PHP Developer at Flexy Negócios Digitais
-###### since March 2014
+##### since March 2014
 > Senior PHP Developer focused in development of a SaaS e-commerce platform highly available, scalable in AWS cloud, using Symfony2, Unit Tests, Service Oriented Architecture, Memcached, Redis, ElasticSearch, ElastiCache, RDS, EC2, ELB, Elastic Beanstalk...
 > Also working as DevOps doing many improvements in deployment script using python and capistrano. Doing many changes to improve performance (load time) and cost reduction.
 
 ### System Analyst at Dígitro Tecnologia
-###### since September 2012
+##### since September 2012
 > Dígitro tecnologia is a big Brazilian company acting in public security systems and call centers management.
 > 
 > I worked as Java system analyst creating web services to integrate applications of different technologies (including a PABX).
