@@ -12,5 +12,7 @@ Specialities: PHP, Java, Shell Script, Python, Linux, ElasticSearch, Solr, Memca
 ### System Analyst at Dígitro Tecnologia since September 2012
 ### Freelance Software Engineer at Chipus Microelectronics between January and February 2014
 
+```markdown
 [![alt text](https://content.linkedin.com/etc/designs/linkedin/katy/global/clientlibs/img/logo.png)]
 (https://www.linkedin.com/in/jeancsil/ "Jean Silva")
+```
