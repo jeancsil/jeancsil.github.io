@@ -4,7 +4,9 @@ I code for living.. and I live very well :P #notsure
 
 Currently I am working at [trivago](https://twitter.com/lifeattrivago?lang=en) in Düsseldorf, Germany.
 
-_Specialities_: `PHP, Java, Shell Script, Python, Linux, ElasticSearch, Solr, Memcached, Redis, AWS, MySQL, MongoDB, Nginx...`
+_Specialities_:
+
+`PHP`, `Java`, `Shell Script`, `Python`, `Linux`, `ElasticSearch`, `Solr`, `Memcached`, `Redis`, `AWS`, `MySQL`, `MongoDB`, `Nginx`...
 
 # Experiences
 ### Software Engineer at trivago since March 2016
