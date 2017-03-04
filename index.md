@@ -1,6 +1,6 @@
 ## Hi, I'm [Jean](mailto:me@jeancsil.com)!
 I work as a Software Engineer since 2008.
-I code for living.. and I live very well :P #notsure
+I code for living.. and I live very well :P `#notsure`
 
 Currently I am working at [trivago](https://twitter.com/lifeattrivago?lang=en) in Düsseldorf, Germany.
 
