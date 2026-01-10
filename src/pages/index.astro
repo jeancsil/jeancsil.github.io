@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Jean Silva - Blog">
+	<main class="min-h-screen flex flex-col justify-center items-center p-4">
+        <div class="max-w-2xl w-full text-center space-y-8">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+                <span class="text-green-500">Hello,</span> World.
+            </h1>
+            <p class="text-xl text-zinc-400">
+                I'm Jean Silva, a Senior Search Engineer. <br>
+                Welcome to my personal slice of the internet.
+            </p>
+            
+            <div class="flex justify-center gap-6 pt-8">
+                <a href="/resume" class="group relative px-6 py-3 font-bold text-zinc-950 bg-green-500 overflow-hidden rounded-sm transition-all hover:bg-green-400">
+                    <span class="relative z-10">View Resume >_</span>
+                </a>
+                <a href="https://github.com/jeancsil" target="_blank" class="px-6 py-3 font-bold text-zinc-400 border border-zinc-800 rounded-sm hover:text-white hover:border-zinc-600 transition-colors">
+                    GitHub
+                </a>
+            </div>
+
+            <div class="pt-24 text-left border-t border-zinc-900 mt-24">
+                <h2 class="text-green-500 font-mono text-sm mb-6 uppercase tracking-wider">Latest Posts</h2>
+                <div class="p-6 border border-zinc-900 rounded bg-zinc-900/30 text-center py-12">
+                    <p class="text-zinc-500 font-mono">No posts found. echo "Coming Soon..."</p>
+                </div>
+            </div>
+        </div>
+	</main>
+</Layout>

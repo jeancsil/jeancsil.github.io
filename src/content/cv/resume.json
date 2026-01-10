@@ -1,0 +1,181 @@
+{
+  "basics": {
+    "name": "Jean Silva",
+    "label": "Senior Search Engineer at AlphaSense",
+    "location": "Barcelona, Catalonia, Spain",
+    "email": "jeancsil@gmail.com",
+    "website": "jeancsil.github.io",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jeancsil",
+        "url": "https://www.linkedin.com/in/jeancsil"
+      },
+      {
+        "network": "GitHub",
+        "username": "jeancsil",
+        "url": "https://github.com/jeancsil"
+      }
+    ]
+  },
+  "summary": "Senior software engineer with 10+ years of experience in backend development and software architecture. Specialized in the search field (Information Retrieval) since 2013/14, working with Apache Solr, Elasticsearch, Opensearch, Apache Lucene, and Vespa.",
+  "skills": [
+    "Apache Solr",
+    "Apache Lucene",
+    "Elasticsearch",
+    "Vespa.ai",
+    "Kubernetes",
+    "Java",
+    "Python",
+    "AWS",
+    "GCP"
+  ],
+  "languages": [
+    {
+      "language": "Portuguese",
+      "fluency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Full Professional"
+    },
+    {
+      "language": "English",
+      "fluency": "Full Professional"
+    },
+    {
+      "language": "German",
+      "fluency": "Elementary"
+    }
+  ],
+  "experience": [
+    {
+      "company": "AlphaSense",
+      "position": "Senior Search Engineer",
+      "startDate": "October 2024",
+      "endDate": "Present",
+      "location": "Barcelona, Catalonia, Spain",
+      "highlights": [
+        "Part of the core Search Infrastructure team for a global leader in market intelligence and AI-powered search.",
+        "Design, build, and maintain Java microservices for mission-critical search operations.",
+        "Operate and scale services across Kubernetes, Apache Solr (Cloud & Standalone), and Vespa.ai environments.",
+        "Drive observability and reliability through advanced alerting to mitigate issues proactively.",
+        "Utilize AI-assisted coding tools (Claude Code, Cursor) to enhance productivity and code quality.",
+        "Maintain a hybrid search ecosystem combining Vespa (vector + keyword retrieval) and Solr, supporting live migrations."
+      ]
+    },
+    {
+      "company": "Wallapop",
+      "position": "Senior Search Engineer",
+      "startDate": "March 2022",
+      "endDate": "September 2024",
+      "duration": "2 years 7 months",
+      "location": "Barcelona, Catalonia, Spain",
+      "highlights": [
+        "Worked on the search engine for Spain's most used second-hand website.",
+        "Implemented Java microservices to control the user search experience with high availability.",
+        "Maintained and configured Apache Solr infrastructure.",
+        "Represented Wallapop at Haystack Europe 2023 with a talk on alternative query strategies."
+      ]
+    },
+    {
+      "company": "trivago",
+      "position": "Software Engineer",
+      "startDate": "January 2021",
+      "endDate": "February 2022",
+      "duration": "1 year 2 months",
+      "location": "Düsseldorf, Germany",
+      "highlights": [
+        "Backend engineer in the Hotel Search team, developing APIs using Java Spring, gRPC, and Kafka.",
+        "Managed microservices in GCP with Kubernetes.",
+        "Became the first \"Expert in Information Retrieval\" at trivago in July 2021."
+      ]
+    },
+    {
+      "company": "real.digital",
+      "position": "Senior Search Engineer (Elasticsearch)",
+      "startDate": "October 2020",
+      "endDate": "December 2020",
+      "duration": "3 months",
+      "location": "Cologne, Germany",
+      "highlights": [
+        "Established foundational search pipeline elements and monitoring metrics for one of Germany's largest marketplaces."
+      ]
+    },
+    {
+      "company": "trivago",
+      "position": "Senior Software Engineer / Search Engineer",
+      "startDate": "March 2016",
+      "endDate": "October 2020",
+      "duration": "4 years 8 months",
+      "location": "Düsseldorf Area, Germany",
+      "highlights": [
+        "Optimized search suggestions across 30 languages and 50 countries.",
+        "Focused on ranking, reranking, sorting, and filtering using Java and Python."
+      ]
+    },
+    {
+      "company": "Flexy Negócios Digitais",
+      "position": "Senior PHP Developer",
+      "startDate": "March 2014",
+      "endDate": "February 2016",
+      "duration": "2 years",
+      "highlights": [
+        "Developed a SaaS e-commerce platform on AWS using Symfony2, Elasticsearch, and Memcached."
+      ]
+    },
+    {
+      "company": "Digitro Tecnologia",
+      "position": "System Analyst",
+      "startDate": "September 2012",
+      "endDate": "March 2014",
+      "duration": "1 year 7 months",
+      "location": "Florianópolis Area, Brazil",
+      "highlights": [
+        "Created Java web services for public security and call center management systems."
+      ]
+    },
+    {
+      "company": "Chipus Microelectronics",
+      "position": "Freelance Software Developer",
+      "startDate": "January 2014",
+      "endDate": "February 2014",
+      "duration": "2 months",
+      "highlights": [
+        "Used Sphinx Search to index 40 million records, reducing search time from ~7 seconds to under 1 second."
+      ]
+    },
+    {
+      "company": "Bookess",
+      "position": "PHP Developer",
+      "startDate": "May 2009",
+      "endDate": "March 2012",
+      "duration": "2 years 11 months",
+      "highlights": []
+    },
+    {
+      "company": "Central de Crédito",
+      "position": "Desenvolvedor PHP",
+      "startDate": "October 2008",
+      "endDate": "October 2009",
+      "duration": "1 year 1 month",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Senai/SC",
+      "area": "Analysis and systems development",
+      "studyType": "Technologist",
+      "startDate": "2010",
+      "endDate": "2012"
+    }
+  ],
+  "certifications": [
+    "Think Like a Relevance Engineer - Solr",
+    "Elasticsearch Essential Training",
+    "Learning Kubernetes",
+    "Java Platforms Compared: SE vs EE vs ME",
+    "Verified International Academic Qualifications"
+  ]
+}
