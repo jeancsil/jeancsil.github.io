@@ -1,4 +1,7 @@
-# Astro Starter Kit: Minimal
+# Basic Personal website
+## Using Astro Starter Kit
+
+[http://jeancsil.com/](https://jeancsil.com)
 
 ```sh
 npm create astro@latest -- --template minimal
@@ -37,7 +40,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Astro Documentation: [our documentation](https://docs.astro.build)
