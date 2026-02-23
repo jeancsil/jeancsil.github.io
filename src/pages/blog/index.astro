@@ -9,7 +9,11 @@ const posts = allPosts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<Layout title="Jean Silva - Blog">
+<Layout
+  title="Jean Silva - Blog"
+  description="Thoughts on AI agents, search engineering, and software development."
+  ogType="website"
+>
   <main class="min-h-screen p-4 md:p-8 max-w-4xl mx-auto">
     <header class="mb-16 border-b border-green-900/50 pb-8">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">

@@ -1,26 +1,89 @@
 ---
 import '../styles/global.css';
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	ogType?: 'website' | 'article';
+	canonical?: string;
+	structuredData?: object;
 }
 
-const { title, description = "Senior Search Engineer" } = Astro.props;
+const {
+	title,
+	description = "Senior Search Engineer",
+	image = "https://jeancsil.com/og-image.png",
+	ogType = 'website',
+	canonical = canonicalURL.href,
+	structuredData
+} = Astro.props;
+
+const siteName = "jeancsil.com";
+const twitterHandle = "@jeancsil";
+
+// Google Analytics GA4 Measurement ID from environment variable
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonical} />
+
+		<!-- OpenGraph / Facebook -->
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:site_name" content={siteName} />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonical} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+		<meta name="twitter:site" content={twitterHandle} />
+		<meta name="twitter:creator" content={twitterHandle} />
+
+		<!-- Preconnect to fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 		<title>{title}</title>
+
+		<!-- Google Analytics (GA4) -->
+		{gaMeasurementId && (
+			<script define:vars={{ gaMeasurementId }}>
+				// Initialize data layer
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+
+				// Configure GA4
+				gtag('js', new Date());
+				gtag('config', gaMeasurementId);
+			</script>
+		)}
+		{gaMeasurementId && (
+			<script src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} async></script>
+		)}
+
+		<!-- JSON-LD Structured Data -->
+		{structuredData && (
+			<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+		)}
 	</head>
 	<body class="bg-zinc-950 text-zinc-200 font-mono antialiased">
 		<slot />
