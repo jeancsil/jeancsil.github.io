@@ -1,5 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get latest blog posts for homepage
+const allPosts = await getCollection('blog');
+const latestPosts = allPosts
+  .filter(post => post.data.date <= new Date())
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 ---
 
 <Layout title="Jean Silva - Blog">
@@ -24,9 +32,47 @@ import Layout from '../layouts/Layout.astro';
 
             <div class="pt-24 text-left border-t border-zinc-900 mt-24">
                 <h2 class="text-green-500 font-mono text-sm mb-6 uppercase tracking-wider">Latest Posts</h2>
-                <div class="p-6 border border-zinc-900 rounded bg-zinc-900/30 text-center py-12">
-                    <p class="text-zinc-500 font-mono">No posts found. echo "Coming Soon..."</p>
+                <div class="space-y-4">
+                    {latestPosts.length === 0 ? (
+                        <div class="p-6 border border-zinc-900 rounded bg-zinc-900/30 text-center py-12">
+                            <p class="text-zinc-500 font-mono">No posts found. echo "Coming Soon..."</p>
+                        </div>
+                    ) : (
+                        latestPosts.map((post) => (
+                            <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="group block p-5 border border-zinc-900 rounded hover:border-green-500/50 transition-colors">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center gap-2 text-xs text-zinc-500">
+                                        <time datetime={post.data.date.toISOString()}>
+                                            {post.data.date.toLocaleDateString('en-US', {
+                                                year: 'numeric',
+                                                month: 'short',
+                                                day: 'numeric'
+                                            })}
+                                        </time>
+                                        {post.data.tags.length > 0 && (
+                                            <>
+                                                <span class="text-zinc-700">•</span>
+                                                <span class="text-green-400">{post.data.tags[0]}</span>
+                                            </>
+                                        )}
+                                    </div>
+                                    <h3 class="text-lg font-bold text-zinc-100 group-hover:text-green-400 transition-colors">
+                                        {post.data.title}
+                                    </h3>
+                                    <p class="text-sm text-zinc-500 line-clamp-2">
+                                        {post.data.description}
+                                    </p>
+                                </div>
+                            </a>
+                        ))
+                    )}
                 </div>
+                <a href="/blog" class="inline-flex items-center gap-2 mt-6 text-sm text-zinc-400 hover:text-green-400 transition-colors">
+                    View all posts
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
             </div>
         </div>
 	</main>
