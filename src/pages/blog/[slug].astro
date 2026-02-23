@@ -19,9 +19,40 @@ interface Props {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+// Build structured data for article
+const articleData = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  image: 'https://jeancsil.com/og-image.png',
+  datePublished: post.data.date.toISOString(),
+  dateModified: post.data.date.toISOString(),
+  author: {
+    '@type': 'Person',
+    name: 'Jean Silva',
+    url: 'https://jeancsil.com'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'jeancsil.com',
+    url: 'https://jeancsil.com'
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://jeancsil.com/blog/${post.id.replace(/\.md$/, '')}`
+  },
+  keywords: post.data.tags.join(', ')
+};
 ---
 
-<Layout title={`${post.data.title} | Jean Silva`}>
+<Layout
+  title={`${post.data.title} | Jean Silva`}
+  description={post.data.description}
+  ogType="article"
+  structuredData={articleData}
+>
   <main class="min-h-screen p-4 md:p-8 max-w-4xl mx-auto">
     <!-- Back to blog link -->
     <a href="/blog" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-green-400 transition-colors mb-12">
