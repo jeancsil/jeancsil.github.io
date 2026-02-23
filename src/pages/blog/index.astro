@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts sorted by date (newest first)
+const allPosts = await getCollection('blog');
+const posts = allPosts
+  .filter(post => post.data.date <= new Date())
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Jean Silva - Blog">
+  <main class="min-h-screen p-4 md:p-8 max-w-4xl mx-auto">
+    <header class="mb-16 border-b border-green-900/50 pb-8">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <span class="text-green-500">~</span> Blog
+      </h1>
+      <p class="text-xl text-zinc-400">
+        Thoughts on AI agents, search engineering, and software development.
+      </p>
+    </header>
+
+    <section class="space-y-8">
+      {posts.length === 0 ? (
+        <div class="p-8 border border-zinc-900 rounded bg-zinc-900/30 text-center">
+          <p class="text-zinc-500 font-mono">No posts yet. echo "Coming soon..."</p>
+        </div>
+      ) : (
+        posts.map((post) => (
+          <article class="group relative">
+            <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="block p-6 border border-zinc-900 rounded hover:border-green-500/50 transition-colors">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-3 text-sm text-zinc-500">
+                  <time datetime={post.data.date.toISOString()}>
+                    {post.data.date.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}
+                  </time>
+                  {post.data.tags.length > 0 && (
+                    <>
+                      <span class="text-zinc-700">•</span>
+                      <div class="flex gap-2">
+                        {post.data.tags.slice(0, 3).map((tag) => (
+                          <span class="px-2 py-0.5 bg-zinc-900 text-green-400 text-xs rounded">
+                            {tag}
+                          </span>
+                        ))}
+                        {post.data.tags.length > 3 && (
+                          <span class="text-zinc-600 text-xs">+{post.data.tags.length - 3}</span>
+                        )}
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                <h2 class="text-xl md:text-2xl font-bold text-zinc-100 group-hover:text-green-400 transition-colors">
+                  {post.data.title}
+                </h2>
+
+                <p class="text-zinc-400 leading-relaxed line-clamp-3">
+                  {post.data.description}
+                </p>
+
+                <div class="pt-2 text-sm text-green-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Read more <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        ))
+      )}
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
