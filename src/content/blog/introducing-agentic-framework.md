@@ -173,20 +173,7 @@ make docker-build
 bin/agent.sh developer -i "Explain the project structure"
 ```
 
-### Local Development
-
-Using `uv` for fast, consistent dependency management:
-
-```bash
-# Install dependencies
-uv sync
-
-# Run the developer agent
-uv run agentic-run developer -i "Explain the project structure"
-
-# List all available agents
-uv run agentic-run list
-```
+PS.: For local installation without docker, check the [README](https://github.com/jeancsil/agentic-framework?tab=readme-ov-file#local-installation).
 
 ## What Makes It Special
 
