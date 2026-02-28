@@ -46,6 +46,21 @@ const articleData = {
   keywords: post.data.tags.join(', ')
 };
 ---
+<!-- Push blog-specific data to Data Layer before Layout loads -->
+<script define:vars={{ post }}>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'page_metadata',
+    page_type: 'blog_post',
+    post_title: post.data.title,
+    post_description: post.data.description,
+    post_category: post.data.tags[0] || 'Uncategorized',
+    post_tags: post.data.tags,
+    post_author: 'Jean Silva',
+    post_date: post.data.date.toISOString(),
+    post_url: `https://jeancsil.com/blog/${post.id.replace(/\.md$/, '')}`
+  });
+</script>
 
 <Layout
   title={`${post.data.title} | Jean Silva`}

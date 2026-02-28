@@ -24,8 +24,8 @@ const {
 const siteName = "jeancsil.com";
 const twitterHandle = "@jeancsil";
 
-// Google Analytics GA4 Measurement ID
-const gaMeasurementId = 'G-Z4E5MYQDEB';
+// Google Tag Manager Container ID
+const gtmContainerId = 'GTM-52FZW5J';
 ---
 
 <!doctype html>
@@ -57,6 +57,22 @@ const gaMeasurementId = 'G-Z4E5MYQDEB';
 		<meta name="twitter:site" content={twitterHandle} />
 		<meta name="twitter:creator" content={twitterHandle} />
 
+		<!-- Google Tag Manager - Data Layer (must be before GTM script) -->
+		<script>
+			window.dataLayer = window.dataLayer || [];
+		</script>
+
+		<!-- Google Tag Manager (head) - Load as early as possible -->
+		{gtmContainerId && (
+			<script define:vars={{ gtmContainerId }}>
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-52FZW5J');
+			</script>
+		)}
+
 		<!-- Preconnect to fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,28 +80,16 @@ const gaMeasurementId = 'G-Z4E5MYQDEB';
 
 		<title>{title}</title>
 
-		<!-- Google Analytics (GA4) -->
-		{gaMeasurementId && (
-			<script define:vars={{ gaMeasurementId }}>
-				// Initialize data layer
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-
-				// Configure GA4
-				gtag('js', new Date());
-				gtag('config', gaMeasurementId);
-			</script>
-		)}
-		{gaMeasurementId && (
-			<script src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} async></script>
-		)}
-
 		<!-- JSON-LD Structured Data -->
 		{structuredData && (
 			<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		)}
 	</head>
 	<body class="bg-zinc-950 text-zinc-200 font-mono antialiased">
+		<!-- Google Tag Manager (noscript) -->
+		{gtmContainerId && (
+			<noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=GTM-52FZW5J`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		)}
 		<slot />
 	</body>
 </html>
