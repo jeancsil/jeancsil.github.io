@@ -34,7 +34,7 @@ export ANTHROPIC_BASE_URL=http://127.0.0.1:9099
 
 That's the entire integration. Everything else — tool calls, streaming, model selection — passes through untouched.
 
-![LLM Compressor dashboard showing dual-layer savings — 97% shell compression via rtk and 30% API prompt compression](/blog/llm-compressor/dashboard-hero.png)
+![LLM Compressor dashboard — shell layer (rtk) and API layer (LLMLingua-2/kompress) savings side by side, with per-session token breakdown and RTK command table](/blog/llm-compressor/dashboard-hero.png)
 
 ## The Compression Models
 
@@ -160,7 +160,6 @@ Start a Claude Code session. Open `http://127.0.0.1:9099/dashboard`. Watch the n
 After a few weeks of daily Claude Code usage, my all-time stats look like this:
 
 - **47.3% average token savings** per compressed message
-- **~2.2× compression ratio** on verbose tool output
 - **< 800ms** added latency per request (llmlingua2 base model on MPS)
 
 Whether that translates to meaningful cost savings depends on your usage volume. For heavy Claude Code sessions with lots of tool calls and file reads, the savings add up fast.
